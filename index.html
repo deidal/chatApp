@@ -1,0 +1,119 @@
+<!-- Structure needs -->
+<!-- 
+    chat box
+    "screen"
+    input box
+    send button
+        
+    on messages: 
+    acurate time
+    user name 
+
+    possibly: 
+    ... typing icon
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+    </style>
+</head>
+<body>
+
+<!-- wrapper -->
+<div class="wrapper" id="wrapper" >
+
+    <!-- screen -->
+        <!-- messages -->
+    <div id="screen">
+        <div id="header">
+            <p>ChatBot</p>
+        </div>
+
+ 
+       <!-- <div id="bubble" class = "bubble bot">
+            <p> message </p>
+            <span class="time-bot">4:58</span>
+            <div id = "time" class = "time bot"></div>
+        </div>
+        
+        <div id="bubble-user" class ="bubble user">
+            <p id="message-box"> 
+                 
+            </p>
+            <span class="time-user" onload="getCurrentTime()" style="text-align: center"></span>
+        </div> -->
+
+    </div> 
+    
+
+    <!-- input box -->
+    <div class="inputBox">
+        <div class="input">
+            <!-- <form action="inputBox" id ="inputBox">  -->
+                        <!-- input -->
+                            <textarea class ="textArea" type="text" id="input"></textarea>   
+                    <!-- </form> -->
+        </div>
+         <!-- button -->
+        <div class="button">
+            <input type="submit" id="send" value="Send message" >
+        </div>
+    </div>
+
+
+    <script> 
+    $(document).ready(function() {
+        $("#send").click(function() {
+            newTextMessage(); 
+
+            //send bot message 5 seconds after you click 'send' button
+            setTimeout( function() {
+            chatBotMessage()
+        }, 2000);
+        });
+
+
+        
+    });
+   
+    // $(function() {
+    //     $('#send').click(function(e){
+    //     $('<p />', {
+    //         'class': 'bubble user', 
+    //         text: $('textarea').val(),
+            
+    //         appendTo: '#bubble-user',
+
+            
+    //         })
+    //     }) 
+    // })
+
+
+     $(function(){
+        $("#send").click(function () {
+            $("textarea").val('');
+        });
+    });
+    
+    // </script>
+    
+   
+<script src="script.js"></script>
+</div>
+</body>
+</html>
+
+
+
+
+

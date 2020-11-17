@@ -1,0 +1,218 @@
+/* styling */
+/* 
+    message bubbles should have different colors
+    smooth transition 
+    time 
+    automatic scrolling down
+
+*/
+
+:root{
+    --primary: #ddd; 
+    --dark: #333; 
+    --light: #fff; 
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.0);
+    --console-color: rgb(136, 174, 172); 
+    --screen-color: rgb(234, 240, 239);
+}
+
+/* html{
+    /* box-sizing: border-box; */
+    /* color: var(--dark); */
+    /* height: 100vh; 
+
+} */
+/* background */
+
+body{
+    background: rgb(242, 242, 234);
+    /* margin: 30px 50px;  */
+    line-height: 1.4;
+    /* height: 90vh; */
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+}
+
+/* wrapper */
+.wrapper{
+    /* display: grid;  */
+    /* grid-gap: 20px; */
+    /* display: inline-block; */
+    width: 50vw;
+    height: 71vh;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: rgb(136, 174, 172);
+    border-radius: 15px 15px 15px 15px;
+}
+
+p{
+    border: 2px solid green;
+    margin: auto;
+    margin-top: 1vh;
+    width: 50%;
+}
+
+/* screen */
+#screen{
+    border: 1px solid rgb(0, 0, 0);
+    background: var(--screen-color);
+    height: 50vh;
+    width: 45vw;
+    margin: auto;
+    margin-top: 3vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+/* header */
+#header {
+    top:0;
+    position: relative;
+    height: 4vh;
+    width: 45vw;
+    border: 1px solid blue;
+    background-color: rgb(204, 204, 204);
+    border-radius: 15px 15px 0 0;
+    position: sticky;
+}
+
+/* Message from ChatBot */
+
+.bubble {
+    height: auto;
+    background: rgba(163, 197, 213, 0.823);
+    width: 20vw;
+    margin-top: 3vh;
+    margin-left: 0.5vw; 
+    word-wrap: break-word;
+}
+
+.bot {
+    float: left;
+    margin-left: -20vw;    
+    border-radius: 15px 15px 15px 0px;
+
+}
+
+.user{
+    float: right;
+    background: rgba(50, 65, 72, 0.823);
+    margin-left: 20vw;
+    /* line-height: 4vh; */
+    border-radius: 15px 15px 0px 15px;
+
+}
+
+
+
+/* time */
+.time {
+    float: right; 
+    color: white;
+    /* margin: auto; */
+    margin-right: 1vw;
+    position: static;
+    font-size: 12px;
+    /* width: auto; */
+}
+
+/* inputBox */
+.inputBox{
+    height: 18vh;
+    margin: 0; 
+    width: 50vw;
+    background: var(--console-color); 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 15px;
+}
+
+/* input */
+#input{
+    height: 8vh;
+    width: 45vw;
+    margin: 1vh 2vw;
+    border-radius: 10px 10px;
+    background-color: var(--screen-color);
+    font-family: 'Roboto Slab', serif;
+
+}
+
+.input{
+    height: 5vh;
+    /* margin: 0;  */
+
+}
+
+/* button */
+#send {
+    background: var(--dark);
+    color: var(--light); 
+    padding: 10px;
+    border: 0;
+    border-radius: 5px 5px;
+    height: 5vh;
+    cursor: pointer;
+    margin-top: 5vh;
+    margin-left: 20vw;
+    /* margin: auto; */
+    /* display: flex; */
+    font-family: 'Roboto Slab', serif;
+
+}
+
+input#send:hover{
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.624);
+    transition: .2s;
+}
+/* 
+@media()
+830x960 */
+
+@media only screen and (max-width: 450px) {
+    html{
+        width: 100vw;
+        height: 100vh;
+    }
+    .wrapper{
+        width: 80vw;
+        align-items: center;
+    }
+    #screen {
+        width: 70vw;
+        align-items: center;
+    }
+    #header{
+        width: 100%;;
+    }
+    .inputBox{
+        width: 80vw;
+        align-items: center;
+    }
+    #input {
+        width: 60vw;
+        margin: 1vh 9vw;
+    }
+    #send {
+        margin-left: 25vw;
+    }
+
+    .bubble{
+        margin: 1vh auto; 
+        width: 80%;
+    }
+
+
+
+
+}
